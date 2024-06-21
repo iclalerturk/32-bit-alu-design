@@ -1,0 +1,278 @@
+$date
+	Fri Mar 29 23:19:47 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module mux8x3_tb $end
+$var wire 1 ! out $end
+$var reg 1 " a $end
+$var reg 1 # b $end
+$var reg 1 $ c $end
+$var reg 1 % d $end
+$var reg 1 & e $end
+$var reg 1 ' f $end
+$var reg 1 ( g $end
+$var reg 1 ) h $end
+$var reg 3 * select [2:0] $end
+$scope module uut $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 1 & e $end
+$var wire 1 ' f $end
+$var wire 1 ( g $end
+$var wire 1 ) h $end
+$var wire 3 + select [2:0] $end
+$var wire 1 , out2 $end
+$var wire 1 - out1 $end
+$var wire 1 ! out $end
+$scope module m1 $end
+$var wire 1 " a $end
+$var wire 1 # b $end
+$var wire 1 $ c $end
+$var wire 1 % d $end
+$var wire 2 . select [1:0] $end
+$var wire 1 / out2 $end
+$var wire 1 0 out1 $end
+$var wire 1 - out $end
+$scope module mu1 $end
+$var wire 1 " a $end
+$var wire 1 1 and_1 $end
+$var wire 1 2 and_2 $end
+$var wire 1 # b $end
+$var wire 1 0 out $end
+$var wire 1 3 select $end
+$var wire 1 4 select_not $end
+$upscope $end
+$scope module mu2 $end
+$var wire 1 $ a $end
+$var wire 1 5 and_1 $end
+$var wire 1 6 and_2 $end
+$var wire 1 % b $end
+$var wire 1 / out $end
+$var wire 1 7 select $end
+$var wire 1 8 select_not $end
+$upscope $end
+$scope module mu3 $end
+$var wire 1 0 a $end
+$var wire 1 9 and_1 $end
+$var wire 1 : and_2 $end
+$var wire 1 / b $end
+$var wire 1 - out $end
+$var wire 1 ; select $end
+$var wire 1 < select_not $end
+$upscope $end
+$upscope $end
+$scope module m2 $end
+$var wire 1 & a $end
+$var wire 1 ' b $end
+$var wire 1 ( c $end
+$var wire 1 ) d $end
+$var wire 2 = select [1:0] $end
+$var wire 1 > out2 $end
+$var wire 1 ? out1 $end
+$var wire 1 , out $end
+$scope module mu1 $end
+$var wire 1 & a $end
+$var wire 1 @ and_1 $end
+$var wire 1 A and_2 $end
+$var wire 1 ' b $end
+$var wire 1 ? out $end
+$var wire 1 B select $end
+$var wire 1 C select_not $end
+$upscope $end
+$scope module mu2 $end
+$var wire 1 ( a $end
+$var wire 1 D and_1 $end
+$var wire 1 E and_2 $end
+$var wire 1 ) b $end
+$var wire 1 > out $end
+$var wire 1 F select $end
+$var wire 1 G select_not $end
+$upscope $end
+$scope module mu3 $end
+$var wire 1 ? a $end
+$var wire 1 H and_1 $end
+$var wire 1 I and_2 $end
+$var wire 1 > b $end
+$var wire 1 , out $end
+$var wire 1 J select $end
+$var wire 1 K select_not $end
+$upscope $end
+$upscope $end
+$scope module m3 $end
+$var wire 1 - a $end
+$var wire 1 L and_1 $end
+$var wire 1 M and_2 $end
+$var wire 1 , b $end
+$var wire 1 ! out $end
+$var wire 1 N select $end
+$var wire 1 O select_not $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+1O
+0N
+1M
+0L
+1K
+0J
+1I
+0H
+1G
+0F
+1E
+0D
+1C
+0B
+0A
+0@
+0?
+1>
+b0 =
+1<
+0;
+0:
+09
+18
+07
+06
+05
+14
+03
+02
+01
+00
+0/
+b0 .
+0-
+1,
+b0 +
+b0 *
+1)
+0(
+0'
+0&
+0%
+0$
+0#
+0"
+1!
+$end
+#1
+1!
+1M
+1,
+04
+08
+0C
+0G
+1D
+1I
+13
+17
+1B
+1F
+1>
+b1 .
+b1 =
+0E
+b1 *
+b1 +
+0)
+1(
+#2
+1L
+1-
+1:
+1/
+16
+1!
+0,
+14
+18
+1C
+1G
+0M
+0I
+03
+07
+0B
+0F
+0O
+0>
+b0 .
+b0 =
+1N
+0D
+b100 *
+b100 +
+0(
+1%
+#3
+1M
+1,
+0-
+0<
+0K
+1!
+1H
+0:
+1;
+1J
+1O
+0L
+1?
+0/
+b10 .
+b10 =
+0N
+1A
+06
+b10 *
+b10 +
+1'
+0%
+#4
+1L
+1-
+19
+10
+1!
+0,
+04
+11
+08
+0C
+0G
+0M
+0H
+13
+17
+1B
+1F
+0O
+0?
+0/
+b11 .
+b11 =
+1N
+0A
+06
+b111 *
+b111 +
+0'
+1%
+1"
+#5

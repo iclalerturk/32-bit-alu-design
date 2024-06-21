@@ -1,0 +1,74 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000020c307ba4b0 .scope module, "not4bit_tb" "not4bit_tb" 2 2;
+ .timescale 0 0;
+v0000020c30805e10_0 .var "a", 3 0;
+v0000020c30805eb0_0 .net "out", 3 0, L_0000020c3084bc60;  1 drivers
+S_0000020c307b9b20 .scope module, "a1" "not4bit" 2 6, 3 2 0, S_0000020c307ba4b0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000020c307bc360_0 .net "a", 3 0, v0000020c30805e10_0;  1 drivers
+v0000020c30805d70_0 .net "out", 3 0, L_0000020c3084bc60;  alias, 1 drivers
+L_0000020c307d2950 .part v0000020c30805e10_0, 0, 1;
+L_0000020c3084c3e0 .part v0000020c30805e10_0, 1, 1;
+L_0000020c3084be40 .part v0000020c30805e10_0, 2, 1;
+L_0000020c3084ba80 .part v0000020c30805e10_0, 3, 1;
+L_0000020c3084bc60 .concat8 [ 1 1 1 1], L_0000020c307bc400, L_0000020c307baf70, L_0000020c307d2cb0, L_0000020c307d2e10;
+S_0000020c307b9670 .scope module, "a1" "not1bit" 3 6, 4 1 0, S_0000020c307b9b20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000020c307bc400 .functor NOT 1, L_0000020c307d2950, C4<0>, C4<0>, C4<0>;
+v0000020c307ba360_0 .net "a", 0 0, L_0000020c307d2950;  1 drivers
+v0000020c307b9800_0 .net "out", 0 0, L_0000020c307bc400;  1 drivers
+S_0000020c307bac50 .scope module, "a2" "not1bit" 3 7, 4 1 0, S_0000020c307b9b20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000020c307baf70 .functor NOT 1, L_0000020c3084c3e0, C4<0>, C4<0>, C4<0>;
+v0000020c307b98a0_0 .net "a", 0 0, L_0000020c3084c3e0;  1 drivers
+v0000020c307b9cb0_0 .net "out", 0 0, L_0000020c307baf70;  1 drivers
+S_0000020c307bade0 .scope module, "a3" "not1bit" 3 8, 4 1 0, S_0000020c307b9b20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000020c307d2cb0 .functor NOT 1, L_0000020c3084be40, C4<0>, C4<0>, C4<0>;
+v0000020c307b9d50_0 .net "a", 0 0, L_0000020c3084be40;  1 drivers
+v0000020c307bbff0_0 .net "out", 0 0, L_0000020c307d2cb0;  1 drivers
+S_0000020c307bc090 .scope module, "a4" "not1bit" 3 9, 4 1 0, S_0000020c307b9b20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000020c307d2e10 .functor NOT 1, L_0000020c3084ba80, C4<0>, C4<0>, C4<0>;
+v0000020c307bc220_0 .net "a", 0 0, L_0000020c3084ba80;  1 drivers
+v0000020c307bc2c0_0 .net "out", 0 0, L_0000020c307d2e10;  1 drivers
+    .scope S_0000020c307ba4b0;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "not4bit_tb.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000020c307ba4b0 {0 0 0};
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v0000020c30805e10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v0000020c30805e10_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v0000020c30805e10_0, 0, 4;
+    %delay 1, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "not4bit_tb.v";
+    "./not4bit.v";
+    "./not1bit.v";

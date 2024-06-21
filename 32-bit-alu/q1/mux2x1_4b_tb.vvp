@@ -1,0 +1,136 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000147d786d960 .scope module, "mux2x1_4b_tb" "mux2x1_4b_tb" 2 3;
+ .timescale 0 0;
+v00000147d78c74c0_0 .var "a", 3 0;
+v00000147d78c5f80_0 .var "b", 3 0;
+v00000147d78c63e0_0 .net "out", 3 0, L_00000147d78c7600;  1 drivers
+v00000147d78c7060_0 .var "select", 0 0;
+S_00000147d77e9140 .scope module, "mux1" "mux2x1_4b" 2 7, 3 2 0, S_00000147d786d960;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 4 "out";
+    .port_info 1 /INPUT 4 "a";
+    .port_info 2 /INPUT 4 "b";
+    .port_info 3 /INPUT 1 "select";
+v00000147d78c6e80_0 .net "a", 3 0, v00000147d78c74c0_0;  1 drivers
+v00000147d78c5ee0_0 .net "b", 3 0, v00000147d78c5f80_0;  1 drivers
+v00000147d78c72e0_0 .net "out", 3 0, L_00000147d78c7600;  alias, 1 drivers
+v00000147d78c7420_0 .net "select", 0 0, v00000147d78c7060_0;  1 drivers
+L_00000147d78c6980 .part v00000147d78c74c0_0, 3, 1;
+L_00000147d78c6200 .part v00000147d78c5f80_0, 3, 1;
+L_00000147d78c6ca0 .part v00000147d78c74c0_0, 2, 1;
+L_00000147d78c5d00 .part v00000147d78c5f80_0, 2, 1;
+L_00000147d78c6160 .part v00000147d78c74c0_0, 1, 1;
+L_00000147d78c6fc0 .part v00000147d78c5f80_0, 1, 1;
+L_00000147d78c7600 .concat8 [ 1 1 1 1], L_00000147d78d09b0, L_00000147d786d240, L_00000147d786d7f0, L_00000147d786d780;
+L_00000147d78c62a0 .part v00000147d78c74c0_0, 0, 1;
+L_00000147d78c76a0 .part v00000147d78c5f80_0, 0, 1;
+S_00000147d77ee9a0 .scope module, "m1" "mux2x1" 3 8, 4 1 0, S_00000147d77e9140;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "select";
+L_00000147d786d2b0 .functor NOT 1, v00000147d78c7060_0, C4<0>, C4<0>, C4<0>;
+L_00000147d786d5c0 .functor AND 1, L_00000147d78c6980, v00000147d78c7060_0, C4<1>, C4<1>;
+L_00000147d786d630 .functor AND 1, L_00000147d78c6200, L_00000147d786d2b0, C4<1>, C4<1>;
+L_00000147d786d780 .functor OR 1, L_00000147d786d5c0, L_00000147d786d630, C4<0>, C4<0>;
+v00000147d786c760_0 .net "a", 0 0, L_00000147d78c6980;  1 drivers
+v00000147d786c3a0_0 .net "and_1", 0 0, L_00000147d786d5c0;  1 drivers
+v00000147d786c6c0_0 .net "and_2", 0 0, L_00000147d786d630;  1 drivers
+v00000147d786bcc0_0 .net "b", 0 0, L_00000147d78c6200;  1 drivers
+v00000147d786bd60_0 .net "out", 0 0, L_00000147d786d780;  1 drivers
+v00000147d786c620_0 .net "select", 0 0, v00000147d78c7060_0;  alias, 1 drivers
+v00000147d786b860_0 .net "select_not", 0 0, L_00000147d786d2b0;  1 drivers
+S_00000147d77eeb30 .scope module, "m2" "mux2x1" 3 9, 4 1 0, S_00000147d77e9140;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "select";
+L_00000147d786d6a0 .functor NOT 1, v00000147d78c7060_0, C4<0>, C4<0>, C4<0>;
+L_00000147d786d320 .functor AND 1, L_00000147d78c6ca0, v00000147d78c7060_0, C4<1>, C4<1>;
+L_00000147d786d4e0 .functor AND 1, L_00000147d78c5d00, L_00000147d786d6a0, C4<1>, C4<1>;
+L_00000147d786d7f0 .functor OR 1, L_00000147d786d320, L_00000147d786d4e0, C4<0>, C4<0>;
+v00000147d786be00_0 .net "a", 0 0, L_00000147d78c6ca0;  1 drivers
+v00000147d786bea0_0 .net "and_1", 0 0, L_00000147d786d320;  1 drivers
+v00000147d786b900_0 .net "and_2", 0 0, L_00000147d786d4e0;  1 drivers
+v00000147d786c580_0 .net "b", 0 0, L_00000147d78c5d00;  1 drivers
+v00000147d786c080_0 .net "out", 0 0, L_00000147d786d7f0;  1 drivers
+v00000147d786b9a0_0 .net "select", 0 0, v00000147d78c7060_0;  alias, 1 drivers
+v00000147d786c260_0 .net "select_not", 0 0, L_00000147d786d6a0;  1 drivers
+S_00000147d7842550 .scope module, "m3" "mux2x1" 3 10, 4 1 0, S_00000147d77e9140;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "select";
+L_00000147d786d470 .functor NOT 1, v00000147d78c7060_0, C4<0>, C4<0>, C4<0>;
+L_00000147d786d0f0 .functor AND 1, L_00000147d78c6160, v00000147d78c7060_0, C4<1>, C4<1>;
+L_00000147d786d1d0 .functor AND 1, L_00000147d78c6fc0, L_00000147d786d470, C4<1>, C4<1>;
+L_00000147d786d240 .functor OR 1, L_00000147d786d0f0, L_00000147d786d1d0, C4<0>, C4<0>;
+v00000147d786c440_0 .net "a", 0 0, L_00000147d78c6160;  1 drivers
+v00000147d786c4e0_0 .net "and_1", 0 0, L_00000147d786d0f0;  1 drivers
+v00000147d78c6ac0_0 .net "and_2", 0 0, L_00000147d786d1d0;  1 drivers
+v00000147d78c7740_0 .net "b", 0 0, L_00000147d78c6fc0;  1 drivers
+v00000147d78c6700_0 .net "out", 0 0, L_00000147d786d240;  1 drivers
+v00000147d78c7100_0 .net "select", 0 0, v00000147d78c7060_0;  alias, 1 drivers
+v00000147d78c68e0_0 .net "select_not", 0 0, L_00000147d786d470;  1 drivers
+S_00000147d78426e0 .scope module, "m4" "mux2x1" 3 11, 4 1 0, S_00000147d77e9140;
+ .timescale 0 0;
+    .port_info 0 /OUTPUT 1 "out";
+    .port_info 1 /INPUT 1 "a";
+    .port_info 2 /INPUT 1 "b";
+    .port_info 3 /INPUT 1 "select";
+L_00000147d786d400 .functor NOT 1, v00000147d78c7060_0, C4<0>, C4<0>, C4<0>;
+L_00000147d786d550 .functor AND 1, L_00000147d78c62a0, v00000147d78c7060_0, C4<1>, C4<1>;
+L_00000147d78d1510 .functor AND 1, L_00000147d78c76a0, L_00000147d786d400, C4<1>, C4<1>;
+L_00000147d78d09b0 .functor OR 1, L_00000147d786d550, L_00000147d78d1510, C4<0>, C4<0>;
+v00000147d78c71a0_0 .net "a", 0 0, L_00000147d78c62a0;  1 drivers
+v00000147d78c60c0_0 .net "and_1", 0 0, L_00000147d786d550;  1 drivers
+v00000147d78c6840_0 .net "and_2", 0 0, L_00000147d78d1510;  1 drivers
+v00000147d78c6020_0 .net "b", 0 0, L_00000147d78c76a0;  1 drivers
+v00000147d78c7240_0 .net "out", 0 0, L_00000147d78d09b0;  1 drivers
+v00000147d78c6de0_0 .net "select", 0 0, v00000147d78c7060_0;  alias, 1 drivers
+v00000147d78c6d40_0 .net "select_not", 0 0, L_00000147d786d400;  1 drivers
+    .scope S_00000147d786d960;
+T_0 ;
+    %vpi_call 2 10 "$dumpfile", "mux2x1_4b_tb.vcd" {0 0 0};
+    %vpi_call 2 11 "$dumpvars", 32'sb00000000000000000000000000000000, S_00000147d786d960 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000147d78c7060_0, 0, 1;
+    %pushi/vec4 10, 0, 4;
+    %store/vec4 v00000147d78c74c0_0, 0, 4;
+    %pushi/vec4 2, 0, 4;
+    %store/vec4 v00000147d78c5f80_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000147d78c7060_0, 0, 1;
+    %pushi/vec4 1, 0, 4;
+    %store/vec4 v00000147d78c74c0_0, 0, 4;
+    %pushi/vec4 8, 0, 4;
+    %store/vec4 v00000147d78c5f80_0, 0, 4;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000147d78c7060_0, 0, 1;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v00000147d78c74c0_0, 0, 4;
+    %pushi/vec4 6, 0, 4;
+    %store/vec4 v00000147d78c5f80_0, 0, 4;
+    %delay 1, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "mux2x1_4b_tb.v";
+    "./mux2x1_4b.v";
+    "./mux2x1.v";

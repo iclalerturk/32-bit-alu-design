@@ -1,0 +1,93 @@
+$date
+	Thu Mar 28 17:17:50 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module and4bit_tb $end
+$var wire 4 ! out [3:0] $end
+$var reg 4 " a [3:0] $end
+$var reg 4 # b [3:0] $end
+$scope module a1 $end
+$var wire 4 $ a [3:0] $end
+$var wire 4 % b [3:0] $end
+$var wire 4 & out [3:0] $end
+$scope module a1 $end
+$var wire 1 ' a $end
+$var wire 1 ( b $end
+$var wire 1 ) out $end
+$upscope $end
+$scope module a2 $end
+$var wire 1 * a $end
+$var wire 1 + b $end
+$var wire 1 , out $end
+$upscope $end
+$scope module a3 $end
+$var wire 1 - a $end
+$var wire 1 . b $end
+$var wire 1 / out $end
+$upscope $end
+$scope module a4 $end
+$var wire 1 0 a $end
+$var wire 1 1 b $end
+$var wire 1 2 out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+02
+01
+10
+0/
+0.
+0-
+1,
+1+
+1*
+0)
+0(
+0'
+b10 &
+b10 %
+b1010 $
+b10 #
+b1010 "
+b10 !
+$end
+#1
+b0 !
+b0 &
+0,
+0+
+11
+1'
+0*
+00
+b1000 #
+b1000 %
+b1 "
+b1 $
+#2
+1,
+b110 !
+b110 &
+1/
+1+
+1.
+01
+0'
+1*
+1-
+b110 #
+b110 %
+b110 "
+b110 $
+#3

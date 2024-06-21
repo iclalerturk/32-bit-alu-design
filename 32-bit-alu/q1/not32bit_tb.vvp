@@ -1,0 +1,367 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000021a38ad32f0 .scope module, "not32bit_tb" "not32bit_tb" 2 2;
+ .timescale 0 0;
+v0000021a38b2d020_0 .var "a", 31 0;
+v0000021a38b2db60_0 .net "out", 31 0, L_0000021a38b2fa00;  1 drivers
+S_0000021a38ab5d70 .scope module, "a1" "not32bit" 2 6, 3 2 0, S_0000021a38ad32f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 32 "a";
+    .port_info 1 /OUTPUT 32 "out";
+v0000021a38b2cf80_0 .net "a", 31 0, v0000021a38b2d020_0;  1 drivers
+o0000021a38ad5508 .functor BUFZ 32, C4<zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz>; HiZ drive
+v0000021a38b2e600_0 .net "b", 31 0, o0000021a38ad5508;  0 drivers
+v0000021a38b2e560_0 .net "out", 31 0, L_0000021a38b2fa00;  alias, 1 drivers
+L_0000021a38b2dc00 .part v0000021a38b2d020_0, 0, 4;
+L_0000021a38b2c8a0 .part v0000021a38b2d020_0, 4, 4;
+L_0000021a38b2c940 .part v0000021a38b2d020_0, 8, 4;
+L_0000021a38b2da20 .part v0000021a38b2d020_0, 12, 4;
+L_0000021a38b2cc60 .part v0000021a38b2d020_0, 16, 4;
+L_0000021a38b30cc0 .part v0000021a38b2d020_0, 20, 4;
+L_0000021a38b316c0 .part v0000021a38b2d020_0, 24, 4;
+L_0000021a38b30a40 .part v0000021a38b2d020_0, 28, 4;
+LS_0000021a38b2fa00_0_0 .concat8 [ 4 4 4 4], L_0000021a38b2d3e0, L_0000021a38b2dde0, L_0000021a38b2d160, L_0000021a38b2d660;
+LS_0000021a38b2fa00_0_4 .concat8 [ 4 4 4 4], L_0000021a38b2cbc0, L_0000021a38b305e0, L_0000021a38b30180, L_0000021a38b31440;
+L_0000021a38b2fa00 .concat8 [ 16 16 0 0], LS_0000021a38b2fa00_0_0, LS_0000021a38b2fa00_0_4;
+S_0000021a38ab5f00 .scope module, "a1" "not4bit" 3 6, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38ac8e90_0 .net "a", 3 0, L_0000021a38b2dc00;  1 drivers
+v0000021a38ac9070_0 .net "out", 3 0, L_0000021a38b2d3e0;  1 drivers
+L_0000021a38b2dfc0 .part L_0000021a38b2dc00, 0, 1;
+L_0000021a38b2d520 .part L_0000021a38b2dc00, 1, 1;
+L_0000021a38b2e100 .part L_0000021a38b2dc00, 2, 1;
+L_0000021a38b2e6a0 .part L_0000021a38b2dc00, 3, 1;
+L_0000021a38b2d3e0 .concat8 [ 1 1 1 1], L_0000021a38b9c3f0, L_0000021a38a82cf0, L_0000021a38a82e50, L_0000021a38ac0e40;
+S_0000021a38ab7fe0 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38ab5f00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38b9c3f0 .functor NOT 1, L_0000021a38b2dfc0, C4<0>, C4<0>, C4<0>;
+v0000021a38ac8350_0 .net "a", 0 0, L_0000021a38b2dfc0;  1 drivers
+v0000021a38ac83f0_0 .net "out", 0 0, L_0000021a38b9c3f0;  1 drivers
+S_0000021a38ab8170 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38ab5f00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38a82cf0 .functor NOT 1, L_0000021a38b2d520, C4<0>, C4<0>, C4<0>;
+v0000021a38ac88f0_0 .net "a", 0 0, L_0000021a38b2d520;  1 drivers
+v0000021a38ac8710_0 .net "out", 0 0, L_0000021a38a82cf0;  1 drivers
+S_0000021a38a82590 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38ab5f00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38a82e50 .functor NOT 1, L_0000021a38b2e100, C4<0>, C4<0>, C4<0>;
+v0000021a38ac8990_0 .net "a", 0 0, L_0000021a38b2e100;  1 drivers
+v0000021a38ac8b70_0 .net "out", 0 0, L_0000021a38a82e50;  1 drivers
+S_0000021a38a82720 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38ab5f00;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ac0e40 .functor NOT 1, L_0000021a38b2e6a0, C4<0>, C4<0>, C4<0>;
+v0000021a38ac8c10_0 .net "a", 0 0, L_0000021a38b2e6a0;  1 drivers
+v0000021a38ac8d50_0 .net "out", 0 0, L_0000021a38ac0e40;  1 drivers
+S_0000021a38ac79e0 .scope module, "a2" "not4bit" 3 7, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b29350_0 .net "a", 3 0, L_0000021a38b2c8a0;  1 drivers
+v0000021a38b28090_0 .net "out", 3 0, L_0000021a38b2dde0;  1 drivers
+L_0000021a38b2d480 .part L_0000021a38b2c8a0, 0, 1;
+L_0000021a38b2c800 .part L_0000021a38b2c8a0, 1, 1;
+L_0000021a38b2d0c0 .part L_0000021a38b2c8a0, 2, 1;
+L_0000021a38b2dd40 .part L_0000021a38b2c8a0, 3, 1;
+L_0000021a38b2dde0 .concat8 [ 1 1 1 1], L_0000021a38ac2360, L_0000021a38ac2180, L_0000021a38ac1fa0, L_0000021a38ab8300;
+S_0000021a38ac7b70 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38ac79e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ac2360 .functor NOT 1, L_0000021a38b2d480, C4<0>, C4<0>, C4<0>;
+v0000021a38ac91b0_0 .net "a", 0 0, L_0000021a38b2d480;  1 drivers
+v0000021a38ac9570_0 .net "out", 0 0, L_0000021a38ac2360;  1 drivers
+S_0000021a38ac7d00 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38ac79e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ac2180 .functor NOT 1, L_0000021a38b2c800, C4<0>, C4<0>, C4<0>;
+v0000021a38ac9610_0 .net "a", 0 0, L_0000021a38b2c800;  1 drivers
+v0000021a38ac9750_0 .net "out", 0 0, L_0000021a38ac2180;  1 drivers
+S_0000021a38ac7e90 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38ac79e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ac1fa0 .functor NOT 1, L_0000021a38b2d0c0, C4<0>, C4<0>, C4<0>;
+v0000021a38ac9930_0 .net "a", 0 0, L_0000021a38b2d0c0;  1 drivers
+v0000021a38ac2d10_0 .net "out", 0 0, L_0000021a38ac1fa0;  1 drivers
+S_0000021a38ac8020 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38ac79e0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ab8300 .functor NOT 1, L_0000021a38b2dd40, C4<0>, C4<0>, C4<0>;
+v0000021a38ac26d0_0 .net "a", 0 0, L_0000021a38b2dd40;  1 drivers
+v0000021a38ac2450_0 .net "out", 0 0, L_0000021a38ab8300;  1 drivers
+S_0000021a38aceb90 .scope module, "a3" "not4bit" 3 8, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b27cd0_0 .net "a", 3 0, L_0000021a38b2c940;  1 drivers
+v0000021a38b28db0_0 .net "out", 3 0, L_0000021a38b2d160;  1 drivers
+L_0000021a38b2e1a0 .part L_0000021a38b2c940, 0, 1;
+L_0000021a38b2d8e0 .part L_0000021a38b2c940, 1, 1;
+L_0000021a38b2dca0 .part L_0000021a38b2c940, 2, 1;
+L_0000021a38b2d2a0 .part L_0000021a38b2c940, 3, 1;
+L_0000021a38b2d160 .concat8 [ 1 1 1 1], L_0000021a38ab8370, L_0000021a38ab83e0, L_0000021a38ab6090, L_0000021a38ab6100;
+S_0000021a38aced20 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38aceb90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ab8370 .functor NOT 1, L_0000021a38b2e1a0, C4<0>, C4<0>, C4<0>;
+v0000021a38b29170_0 .net "a", 0 0, L_0000021a38b2e1a0;  1 drivers
+v0000021a38b27a50_0 .net "out", 0 0, L_0000021a38ab8370;  1 drivers
+S_0000021a38aceeb0 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38aceb90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ab83e0 .functor NOT 1, L_0000021a38b2d8e0, C4<0>, C4<0>, C4<0>;
+v0000021a38b281d0_0 .net "a", 0 0, L_0000021a38b2d8e0;  1 drivers
+v0000021a38b27ff0_0 .net "out", 0 0, L_0000021a38ab83e0;  1 drivers
+S_0000021a38acf040 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38aceb90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ab6090 .functor NOT 1, L_0000021a38b2dca0, C4<0>, C4<0>, C4<0>;
+v0000021a38b29210_0 .net "a", 0 0, L_0000021a38b2dca0;  1 drivers
+v0000021a38b28a90_0 .net "out", 0 0, L_0000021a38ab6090;  1 drivers
+S_0000021a38acf1d0 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38aceb90;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38ab6100 .functor NOT 1, L_0000021a38b2d2a0, C4<0>, C4<0>, C4<0>;
+v0000021a38b29030_0 .net "a", 0 0, L_0000021a38b2d2a0;  1 drivers
+v0000021a38b27e10_0 .net "out", 0 0, L_0000021a38ab6100;  1 drivers
+S_0000021a38b29e20 .scope module, "a4" "not4bit" 3 9, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b292b0_0 .net "a", 3 0, L_0000021a38b2da20;  1 drivers
+v0000021a38b28d10_0 .net "out", 3 0, L_0000021a38b2d660;  1 drivers
+L_0000021a38b2d7a0 .part L_0000021a38b2da20, 0, 1;
+L_0000021a38b2c9e0 .part L_0000021a38b2da20, 1, 1;
+L_0000021a38b2dac0 .part L_0000021a38b2da20, 2, 1;
+L_0000021a38b2d340 .part L_0000021a38b2da20, 3, 1;
+L_0000021a38b2d660 .concat8 [ 1 1 1 1], L_0000021a38acf500, L_0000021a38acf420, L_0000021a38acf8f0, L_0000021a38acf880;
+S_0000021a38b29b00 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38b29e20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf500 .functor NOT 1, L_0000021a38b2d7a0, C4<0>, C4<0>, C4<0>;
+v0000021a38b27910_0 .net "a", 0 0, L_0000021a38b2d7a0;  1 drivers
+v0000021a38b289f0_0 .net "out", 0 0, L_0000021a38acf500;  1 drivers
+S_0000021a38b297e0 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38b29e20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf420 .functor NOT 1, L_0000021a38b2c9e0, C4<0>, C4<0>, C4<0>;
+v0000021a38b293f0_0 .net "a", 0 0, L_0000021a38b2c9e0;  1 drivers
+v0000021a38b28630_0 .net "out", 0 0, L_0000021a38acf420;  1 drivers
+S_0000021a38b2a5f0 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38b29e20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf8f0 .functor NOT 1, L_0000021a38b2dac0, C4<0>, C4<0>, C4<0>;
+v0000021a38b290d0_0 .net "a", 0 0, L_0000021a38b2dac0;  1 drivers
+v0000021a38b28130_0 .net "out", 0 0, L_0000021a38acf8f0;  1 drivers
+S_0000021a38b29fb0 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38b29e20;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf880 .functor NOT 1, L_0000021a38b2d340, C4<0>, C4<0>, C4<0>;
+v0000021a38b283b0_0 .net "a", 0 0, L_0000021a38b2d340;  1 drivers
+v0000021a38b277d0_0 .net "out", 0 0, L_0000021a38acf880;  1 drivers
+S_0000021a38b2a460 .scope module, "a5" "not4bit" 3 10, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b28f90_0 .net "a", 3 0, L_0000021a38b2cc60;  1 drivers
+v0000021a38b28810_0 .net "out", 3 0, L_0000021a38b2cbc0;  1 drivers
+L_0000021a38b2e240 .part L_0000021a38b2cc60, 0, 1;
+L_0000021a38b2e2e0 .part L_0000021a38b2cc60, 1, 1;
+L_0000021a38b2ca80 .part L_0000021a38b2cc60, 2, 1;
+L_0000021a38b2cb20 .part L_0000021a38b2cc60, 3, 1;
+L_0000021a38b2cbc0 .concat8 [ 1 1 1 1], L_0000021a38acfab0, L_0000021a38acf810, L_0000021a38acf3b0, L_0000021a38acf730;
+S_0000021a38b29970 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38b2a460;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acfab0 .functor NOT 1, L_0000021a38b2e240, C4<0>, C4<0>, C4<0>;
+v0000021a38b28770_0 .net "a", 0 0, L_0000021a38b2e240;  1 drivers
+v0000021a38b286d0_0 .net "out", 0 0, L_0000021a38acfab0;  1 drivers
+S_0000021a38b29c90 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38b2a460;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf810 .functor NOT 1, L_0000021a38b2e2e0, C4<0>, C4<0>, C4<0>;
+v0000021a38b28270_0 .net "a", 0 0, L_0000021a38b2e2e0;  1 drivers
+v0000021a38b28310_0 .net "out", 0 0, L_0000021a38acf810;  1 drivers
+S_0000021a38b2a140 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38b2a460;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf3b0 .functor NOT 1, L_0000021a38b2ca80, C4<0>, C4<0>, C4<0>;
+v0000021a38b28450_0 .net "a", 0 0, L_0000021a38b2ca80;  1 drivers
+v0000021a38b295d0_0 .net "out", 0 0, L_0000021a38acf3b0;  1 drivers
+S_0000021a38b2a2d0 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38b2a460;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf730 .functor NOT 1, L_0000021a38b2cb20, C4<0>, C4<0>, C4<0>;
+v0000021a38b284f0_0 .net "a", 0 0, L_0000021a38b2cb20;  1 drivers
+v0000021a38b28590_0 .net "out", 0 0, L_0000021a38acf730;  1 drivers
+S_0000021a38b2a7f0 .scope module, "a6" "not4bit" 3 11, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b28c70_0 .net "a", 3 0, L_0000021a38b30cc0;  1 drivers
+v0000021a38b27eb0_0 .net "out", 3 0, L_0000021a38b305e0;  1 drivers
+L_0000021a38b2cd00 .part L_0000021a38b30cc0, 0, 1;
+L_0000021a38b2cda0 .part L_0000021a38b30cc0, 1, 1;
+L_0000021a38b2cee0 .part L_0000021a38b30cc0, 2, 1;
+L_0000021a38b309a0 .part L_0000021a38b30cc0, 3, 1;
+L_0000021a38b305e0 .concat8 [ 1 1 1 1], L_0000021a38acf490, L_0000021a38acf5e0, L_0000021a38acf960, L_0000021a38acf570;
+S_0000021a38b2c280 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38b2a7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf490 .functor NOT 1, L_0000021a38b2cd00, C4<0>, C4<0>, C4<0>;
+v0000021a38b29490_0 .net "a", 0 0, L_0000021a38b2cd00;  1 drivers
+v0000021a38b288b0_0 .net "out", 0 0, L_0000021a38acf490;  1 drivers
+S_0000021a38b2c410 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38b2a7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf5e0 .functor NOT 1, L_0000021a38b2cda0, C4<0>, C4<0>, C4<0>;
+v0000021a38b28bd0_0 .net "a", 0 0, L_0000021a38b2cda0;  1 drivers
+v0000021a38b27870_0 .net "out", 0 0, L_0000021a38acf5e0;  1 drivers
+S_0000021a38b2ae30 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38b2a7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf960 .functor NOT 1, L_0000021a38b2cee0, C4<0>, C4<0>, C4<0>;
+v0000021a38b27d70_0 .net "a", 0 0, L_0000021a38b2cee0;  1 drivers
+v0000021a38b28950_0 .net "out", 0 0, L_0000021a38acf960;  1 drivers
+S_0000021a38b2b150 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38b2a7f0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf570 .functor NOT 1, L_0000021a38b309a0, C4<0>, C4<0>, C4<0>;
+v0000021a38b28b30_0 .net "a", 0 0, L_0000021a38b309a0;  1 drivers
+v0000021a38b28e50_0 .net "out", 0 0, L_0000021a38acf570;  1 drivers
+S_0000021a38b2ab10 .scope module, "a7" "not4bit" 3 12, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b2d980_0 .net "a", 3 0, L_0000021a38b316c0;  1 drivers
+v0000021a38b2d840_0 .net "out", 3 0, L_0000021a38b30180;  1 drivers
+L_0000021a38b31260 .part L_0000021a38b316c0, 0, 1;
+L_0000021a38b2f960 .part L_0000021a38b316c0, 1, 1;
+L_0000021a38b30540 .part L_0000021a38b316c0, 2, 1;
+L_0000021a38b31120 .part L_0000021a38b316c0, 3, 1;
+L_0000021a38b30180 .concat8 [ 1 1 1 1], L_0000021a38acf7a0, L_0000021a38acf9d0, L_0000021a38acf650, L_0000021a38acf6c0;
+S_0000021a38b2afc0 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38b2ab10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf7a0 .functor NOT 1, L_0000021a38b31260, C4<0>, C4<0>, C4<0>;
+v0000021a38b28ef0_0 .net "a", 0 0, L_0000021a38b31260;  1 drivers
+v0000021a38b29530_0 .net "out", 0 0, L_0000021a38acf7a0;  1 drivers
+S_0000021a38b2bab0 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38b2ab10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf9d0 .functor NOT 1, L_0000021a38b2f960, C4<0>, C4<0>, C4<0>;
+v0000021a38b29670_0 .net "a", 0 0, L_0000021a38b2f960;  1 drivers
+v0000021a38b279b0_0 .net "out", 0 0, L_0000021a38acf9d0;  1 drivers
+S_0000021a38b2c0f0 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38b2ab10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf650 .functor NOT 1, L_0000021a38b30540, C4<0>, C4<0>, C4<0>;
+v0000021a38b27af0_0 .net "a", 0 0, L_0000021a38b30540;  1 drivers
+v0000021a38b27c30_0 .net "out", 0 0, L_0000021a38acf650;  1 drivers
+S_0000021a38b2b600 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38b2ab10;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acf6c0 .functor NOT 1, L_0000021a38b31120, C4<0>, C4<0>, C4<0>;
+v0000021a38b27f50_0 .net "a", 0 0, L_0000021a38b31120;  1 drivers
+v0000021a38b27b90_0 .net "out", 0 0, L_0000021a38acf6c0;  1 drivers
+S_0000021a38b2c5a0 .scope module, "a8" "not4bit" 3 13, 4 2 0, S_0000021a38ab5d70;
+ .timescale 0 0;
+    .port_info 0 /INPUT 4 "a";
+    .port_info 1 /OUTPUT 4 "out";
+v0000021a38b2df20_0 .net "a", 3 0, L_0000021a38b30a40;  1 drivers
+v0000021a38b2ce40_0 .net "out", 3 0, L_0000021a38b31440;  1 drivers
+L_0000021a38b2fd20 .part L_0000021a38b30a40, 0, 1;
+L_0000021a38b30860 .part L_0000021a38b30a40, 1, 1;
+L_0000021a38b313a0 .part L_0000021a38b30a40, 2, 1;
+L_0000021a38b30d60 .part L_0000021a38b30a40, 3, 1;
+L_0000021a38b31440 .concat8 [ 1 1 1 1], L_0000021a38acfa40, L_0000021a38b31d70, L_0000021a38b31830, L_0000021a38b31c90;
+S_0000021a38b2bdd0 .scope module, "a1" "not1bit" 4 6, 5 1 0, S_0000021a38b2c5a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38acfa40 .functor NOT 1, L_0000021a38b2fd20, C4<0>, C4<0>, C4<0>;
+v0000021a38b2e380_0 .net "a", 0 0, L_0000021a38b2fd20;  1 drivers
+v0000021a38b2d200_0 .net "out", 0 0, L_0000021a38acfa40;  1 drivers
+S_0000021a38b2bf60 .scope module, "a2" "not1bit" 4 7, 5 1 0, S_0000021a38b2c5a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38b31d70 .functor NOT 1, L_0000021a38b30860, C4<0>, C4<0>, C4<0>;
+v0000021a38b2d700_0 .net "a", 0 0, L_0000021a38b30860;  1 drivers
+v0000021a38b2e060_0 .net "out", 0 0, L_0000021a38b31d70;  1 drivers
+S_0000021a38b2a980 .scope module, "a3" "not1bit" 4 8, 5 1 0, S_0000021a38b2c5a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38b31830 .functor NOT 1, L_0000021a38b313a0, C4<0>, C4<0>, C4<0>;
+v0000021a38b2de80_0 .net "a", 0 0, L_0000021a38b313a0;  1 drivers
+v0000021a38b2e420_0 .net "out", 0 0, L_0000021a38b31830;  1 drivers
+S_0000021a38b2b920 .scope module, "a4" "not1bit" 4 9, 5 1 0, S_0000021a38b2c5a0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "a";
+    .port_info 1 /OUTPUT 1 "out";
+L_0000021a38b31c90 .functor NOT 1, L_0000021a38b30d60, C4<0>, C4<0>, C4<0>;
+v0000021a38b2d5c0_0 .net "a", 0 0, L_0000021a38b30d60;  1 drivers
+v0000021a38b2e4c0_0 .net "out", 0 0, L_0000021a38b31c90;  1 drivers
+    .scope S_0000021a38ad32f0;
+T_0 ;
+    %vpi_call 2 8 "$dumpfile", "not32bit_tb.vcd" {0 0 0};
+    %vpi_call 2 9 "$dumpvars", 32'sb00000000000000000000000000000000, S_0000021a38ad32f0 {0 0 0};
+    %pushi/vec4 4294967295, 0, 32;
+    %store/vec4 v0000021a38b2d020_0, 0, 32;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 32;
+    %store/vec4 v0000021a38b2d020_0, 0, 32;
+    %delay 1, 0;
+    %pushi/vec4 268435457, 0, 32;
+    %store/vec4 v0000021a38b2d020_0, 0, 32;
+    %delay 1, 0;
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 6;
+    "N/A";
+    "<interactive>";
+    "not32bit_tb.v";
+    "./not32bit.v";
+    "./not4bit.v";
+    "./not1bit.v";

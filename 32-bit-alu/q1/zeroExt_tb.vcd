@@ -1,0 +1,35 @@
+$date
+	Tue Apr 02 17:08:14 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module zeroExt_tb $end
+$var wire 32 ! out [31:0] $end
+$var reg 1 " a $end
+$scope module a1 $end
+$var wire 1 " a $end
+$var reg 32 # out [31:0] $end
+$var integer 32 $ i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b100000 $
+b1 #
+1"
+b1 !
+$end
+#1
+b0 !
+b0 #
+b100000 $
+0"
+#2
